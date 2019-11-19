@@ -11,3 +11,5 @@ function findNb(m) {
     for (i = 1, sum = 0; sum < m; sum += i*i*i, i++);
     return sum == m ? (i-1) : -1;
 }
+
+
