@@ -11,3 +11,40 @@ tickets([25, 25, 50, 50, 100]) // => NO. Vasya will not have the right bills to 
 */
 
 
+
+// ======================= SOLUTION ========================
+
+function tickets(peopleInLine){
+  let result = "YES"
+  let vasya = {
+    s: 0,
+    m: 0,
+    l: 0
+  }
+
+  peopleInLine.map(p => {
+    if (p === 25) vasya.s++
+    if (p === 50) {
+      vasya.m++
+      vasya.s >= 1 ? vasya.s-- : result = "NO"
+    }
+    if (p === 100) {
+      vasya.l++
+      if (vasya.s >= 1 && vasya.m >= 1 || vasya.s >= 3) {
+        if (vasya.s >= 1 && vasya.m >= 1) {
+        vasya.s--
+        vasya.m --
+        }
+        if (vasya.s >= 3 && vasya.m < 1) {
+        vasya.s-=3
+        }
+      } else {
+        result = "NO"
+      }
+    }
+  })
+  return result
+}
+
+
+
