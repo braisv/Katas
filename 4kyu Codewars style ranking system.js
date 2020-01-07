@@ -91,3 +91,4 @@ user.incProgress(-4);
 console.log(user.rank);
 console.log(user.progress);
 
+
