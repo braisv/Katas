@@ -24,3 +24,4 @@ var maxSequence = function(arr){
 console.log(maxSequence([-2, -1, -3, -4, -1, -2, -1, -5, -4])) // 0
 console.log(maxSequence([-90, 1, -3, 4, -1, 2, 1, -5, 5])) // 6
 
+
