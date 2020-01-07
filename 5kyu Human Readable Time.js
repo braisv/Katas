@@ -20,4 +20,3 @@ function humanReadable(seconds) {
   return (hh < 10 ? '0'+hh : hh) + ':' + (mm < 10 ? '0'+mm : mm) + ':' + (ss < 10 ? '0'+ss : ss);
 }
 
-
